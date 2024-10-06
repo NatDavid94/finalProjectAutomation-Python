@@ -18,6 +18,7 @@ class BasePage:
         el.send_keys(txt)
 
     def get_text(self, locator) -> str:
+        self.highlight_element(locator, "Orange")
         return self.driver.find_element(*locator).text
 
 
